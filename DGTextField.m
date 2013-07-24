@@ -22,7 +22,7 @@
   return self;
 }
 
--(id) initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
     [self setup:frame];
@@ -30,11 +30,11 @@
   return self;
 }
 
-- (void) setCursorColor:(UIColor *)cursorColor {
+- (void)setCursorColor:(UIColor *)cursorColor {
   cursor_.backgroundColor = cursorColor;
 }
 
-- (UIColor *) cursorColor {
+- (UIColor *)cursorColor {
   return cursor_.backgroundColor;
 }
 
@@ -55,7 +55,7 @@
 // Base Class Overrides
 ////////////////////////////////////////////////////
 
--(BOOL)becomeFirstResponder {
+- (BOOL)becomeFirstResponder {
   cursor_.alpha = 1.0f;
   
   [UIView animateWithDuration:0.5f
@@ -92,8 +92,7 @@
   return [super editingRectForBounds:bounds];
 }
 
-- (CGRect)caretRectForPosition:(UITextPosition *)position
-{
+- (CGRect)caretRectForPosition:(UITextPosition *)position {
   CGRect rect = [super caretRectForPosition:position];
   rect.size.width = 0.0f;
   return rect;
