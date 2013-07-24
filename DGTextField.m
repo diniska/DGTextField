@@ -10,6 +10,7 @@
 
 @implementation DGTextField {
     UIView *cursor_;
+    CGFloat caretWidth_;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -85,7 +86,7 @@
   cursor_.hidden = !range.empty;
   
   CGRect rect = [self caretRectForPosition:range.start];
-  rect.size.width = 3.0f;
+  rect.size.width = caretWidth_;
   cursor_.frame = rect;
   
   return [super editingRectForBounds:bounds];
@@ -93,6 +94,7 @@
 
 - (CGRect)caretRectForPosition:(UITextPosition *)position {
   CGRect rect = [super caretRectForPosition:position];
+  caretWidth_ = rect.size.width;
   rect.size.width = 0.0f;
   return rect;
 }
