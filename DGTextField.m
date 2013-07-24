@@ -8,10 +8,6 @@
 
 #import "DGTextField.h"
 
-@interface DGTextField (Private)
-- (void)setup:(CGRect)frame;
-@end
-
 @implementation DGTextField {
     UIView *cursor_;
 }
