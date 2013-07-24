@@ -1,21 +1,26 @@
-DGTextField
+DGTextField + DGTextView
 ===================
 
 
 ## DESCRIPTION ##
 
 * DGTextField extends UITextField to offer more customization options.
+* DGTextView extends UITextView to offer more customization options.
 
 ## WHAT CAN I CUSTOMIZE ##
 
-1. Carat Color (Cursor Color)  
+1. Cursor color
 
 ## SETUP ##
 
-1. Add DGTextField.h and DGTextField.m to your iOS XCode project.
+1. Add files to your iOS XCode project.
 2. Import DGTextField.h into the class file where you want to use DGTextField.
 
     <pre>#import "DGTextField.h"</pre>
+    
+3. Import DGTextView.h into the class file where you want to use DGTextView.
+
+    <pre>#import "DGTextView.h"</pre>
 
 
 ## CUSTOMIZABLE PROPERTIES ##
