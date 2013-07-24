@@ -16,7 +16,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if (self) {
-    [self setup:self.frame];
+      [self initialize];
   }
   return self;
 }
@@ -24,9 +24,13 @@
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-    [self setup:frame];
+      [self initialize];
   }
   return self;
+}
+
+- (void)initialize {
+    [self setup:self.frame];
 }
 
 - (void)setCursorColor:(UIColor *)cursorColor {
@@ -37,9 +41,6 @@
   return cursor_.backgroundColor;
 }
 
-////////////////////////////////////////////////////
-// Private Implementation
-////////////////////////////////////////////////////
 #pragma mark - Private Implementation
 
 - (void)setup:(CGRect)frame {
@@ -51,9 +52,6 @@
   cursor_.hidden = NO;
 }
 
-////////////////////////////////////////////////////
-// Base Class Overrides
-////////////////////////////////////////////////////
 #pragma mark - Base Class Overrides
 
 - (BOOL)becomeFirstResponder {
