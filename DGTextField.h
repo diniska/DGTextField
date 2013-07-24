@@ -22,9 +22,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #import <UIKit/UIKit.h>
 
-@interface DGTextField : UITextField {
-    UIView *cursor_;
-}
+@interface DGTextField : UITextField
 
 @property (nonatomic, strong) UIColor *cursorColor;
 

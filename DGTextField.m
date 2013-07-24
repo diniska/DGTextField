@@ -12,7 +12,9 @@
 - (void)setup:(CGRect)frame;
 @end
 
-@implementation DGTextField
+@implementation DGTextField {
+    UIView *cursor_;
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
