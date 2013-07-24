@@ -39,6 +39,7 @@
 ////////////////////////////////////////////////////
 // Private Implementation
 ////////////////////////////////////////////////////
+#pragma mark - Private Implementation
 
 - (void)setup:(CGRect)frame {
   // init here
@@ -52,6 +53,7 @@
 ////////////////////////////////////////////////////
 // Base Class Overrides
 ////////////////////////////////////////////////////
+#pragma mark - Base Class Overrides
 
 - (BOOL)becomeFirstResponder {
   cursor_.alpha = 1.0f;
@@ -83,7 +85,6 @@
   cursor_.hidden = !range.empty;
   
   CGRect rect = [self caretRectForPosition:range.start];
-  rect.origin.x = ([self caretRectForPosition:range.start]).origin.x;
   rect.size.width = 3.0f;
   cursor_.frame = rect;
   
